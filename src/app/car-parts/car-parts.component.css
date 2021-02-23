@@ -1,0 +1,10 @@
+
+.description{
+  color: #1976d2;
+  font-size: smaller;
+}
+.price {
+  color: coral;
+  font-weight: bold;
+  font-size: larger;
+}

@@ -1,0 +1,21 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--  <meta charset="UTF-8">-->
+<!--  <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--</body>-->
+<!--</html>-->
+
+<p> There are {{totalCarParts()}} total parts in stock.</p>
+<ul>
+  <li *ngFor="let carPart of carParts">
+    <h2>{{carPart.name | uppercase }}</h2>
+    <p class="description">{{carPart.description | truncate:30}}</p>
+    <p class="price">{{carPart.price | currency:'EUR':true}}</p>
+    <p *ngIf="carPart.inStock > 0" > {{carPart.inStock}} in stock </p>
+    <p *ngIf="carPart.inStock == 0"> Out of Stock </p>
+  </li>
+</ul>
